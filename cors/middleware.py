@@ -12,6 +12,5 @@ class AllowOriginMiddleware(object):
         if origin:
             response['Access-Control-Allow-Origin'] = origin
             response['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
-            response['Access-Control-Max-Age-'] = 1000
             response['Access-Control-Allow-Headers'] = 'Content-Type'
         return response
