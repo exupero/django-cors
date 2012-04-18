@@ -4,8 +4,7 @@ from django.http import HttpResponse
 class AllowOriginMiddleware(object):
     def process_request(self, request):
         if request.method == 'OPTIONS':
-            response = HttpResponse()
-            return response
+            return HttpResponse()
 
     def process_response(self, request, response):
         origin = request.META.get('HTTP_ORIGIN')
