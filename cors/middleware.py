@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.conf import settings
 
-allow_headers = getattr(settings, 'CORS_ALLOW_HEADERS', "'Content-Type, Authorization'")
+allow_headers = getattr(settings, 'CORS_ALLOW_HEADERS', 'Content-Type, Authorization')
 
 
 class AllowOriginMiddleware(object):
